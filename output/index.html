@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Portfolio</title>
+    <link rel = "icon" href =  
+                    "https://i.pinimg.com/originals/84/e8/47/84e84792bd2f7489443c4bdbc20e182c.png"> 
+    <style>::-webkit-scrollbar {
+      display: none;
+    }</style>
+    <script>
+      function readTextFile(file, callback) {
+        var rawFile = new XMLHttpRequest();
+        rawFile.overrideMimeType('application/json');
+        rawFile.open('GET', file, true);
+        rawFile.onreadystatechange = function () {
+          if (rawFile.readyState === 4 && rawFile.status == '200') {
+            callback(rawFile.responseText);
+          }
+        };
+        rawFile.send(null);
+      }
+      //usage:
+      readTextFile('test.json', function (text) {
+        var data = JSON.parse(text);
+        basic_info_list = data.basic_info_list;
+        education_info_list = data.education_info_list;
+        projects_info_list = data.projects_info_list;
+        certifications_info_list = data.certifications_info_list;
+        experience_info_list = data.experience_info_list;
+        skills_info_list = data.skills_info_list;
+        volunteer_info_list = data.volunteer_info_list;
+        accomplishments_info_list = data.accomplishments_info_list;
+        hobbies_info_list = data.hobbies_info_list;
+        firstname = basic_info_list[0];
+        lastname = basic_info_list[1];
+        about = basic_info_list[2];
+      });
+    </script>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+
+    <link rel="stylesheet" href="css/aos.css" />
+
+    <link rel="stylesheet" href="css/ionicons.min.css" />
+
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/icomoon.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target"
+      id="ftco-navbar"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html" id="navname">Imposters!</a>
+        <button
+          class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle"
+          type="button"
+          data-toggle="collapse"
+          data-target="#ftco-nav"
+          aria-controls="ftco-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item">
+              <a href="#home-section" class="nav-link"><span>Home</span></a>
+            </li>
+             <li class="nav-item">
+              <a href="#about-section" class="nav-link"><span>About</span></a>
+            </li> 
+            <li class="nav-item">
+              <a href="#resume-section" class="nav-link"
+                ><span>Projects</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#services-section" class="nav-link"
+                ><span>Experiences</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#skills-section" class="nav-link"><span>Skills</span></a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section id="home-section" class="hero">
+      <div class="home-slider owl-carousel">
+        <div class="slider-item">
+          <div class="overlay"></div>
+          <div class="container">
+            <div
+              class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+              data-scrollax-parent="true"
+            >
+              <div
+                class="one-third js-fullheight order-md-last img"
+                style="background-image: url('https://i.pinimg.com/originals/84/e8/47/84e84792bd2f7489443c4bdbc20e182c.png')"
+              >
+                <div class="overlay"></div>
+              </div>
+              <div
+                class="one-forth d-flex align-items-center ftco-animate"
+                data-scrollax=" properties: { translateY: '70%' }"
+              >
+                <div class="text">
+                  <span class="subheading">Hello!</span>
+                  <h1 class="mb-4 mt-3">I'm <span id="username"></span></h1>
+                  <h2 class="mb-4" id="userabout">A imposter amoung us !</h2>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+      <div class="container">
+        <div class="row d-flex">
+          <div class="col-md-6 col-lg-5 d-flex">
+            <div class="img-about img d-flex align-items-stretch">
+              <div class="overlay"></div>
+              <div
+                class="img d-flex align-self-stretch align-items-center"
+                style="background-image: url('https://i.pinimg.com/originals/84/e8/47/84e84792bd2f7489443c4bdbc20e182c.png')"
+              ></div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+            <div class="row justify-content-start pb-3">
+              <div class="col-md-12 heading-section ftco-animate">
+                <h1 class="big">About</h1>
+                <h2 class="mb-4">About Me</h2>
+                <p id="aabout">
+                  
+                </p>
+                <ul class="about-info mt-4 px-md-0 px-2">
+                  <li class="d-flex">
+                    <span>Name:</span> <span id='name'></span>
+                  </li>
+                  <li class="d-flex">
+                    <span>College:</span> <span id='college'>Not Available</span>
+                  </li>
+                  <li class="d-flex">
+                    <span>Degree:</span>
+                    <span id='degree'>Not Available</span>
+                  </li>
+                  <li class="d-flex">
+                    <span>Specialization:</span> <span id='branch'>Not Available</span>
+                  </li>
+                  <li class="d-flex">
+                    <span>Passing Year:</span> <span id='year'>Not Available</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 column-1">
+          
+          </div>
+
+          <div class="col-md-6 column-2">
+           
+        
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="ftco-section" id="services-section">
+      <div class="container">
+        <div class="row justify-content-center py-5 mt-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Experiences</h1>
+            <h2 class="mb-4">Experiences</h2>
+          </div>
+        </div>
+        <div class="row experienceList">
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section" id="skills-section">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Skills</h1>
+            <h2 class="mb-4">My Skills</h2>
+            <p>
+              My Skills Are Unknown , Generate to modify !
+            </p>
+          </div>
+        </div>
+        <div class="row skillset">
+        </div>
+      </div>
+    </section>
+    <footer class="ftco-footer ftco-section" style="padding: 5px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p>
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website was made during IVYHACK 2020 <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="#" target="_blank">team Imposters.</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle
+          class="path-bg"
+          cx="24"
+          cy="24"
+          r="22"
+          fill="none"
+          stroke-width="4"
+          stroke="#eeeeee"
+        />
+        <circle
+          class="path"
+          cx="24"
+          cy="24"
+          r="22"
+          fill="none"
+          stroke-width="4"
+          stroke-miterlimit="10"
+          stroke="#F96D00"
+        />
+      </svg>
+    </div>
+    <script>
+      document.getElementById('username').innerHTML =
+        firstname + ' ' + lastname;
+        document.getElementById('name').innerHTML =
+        firstname + ' ' + lastname;
+      document.getElementById('userabout').innerHTML = about;
+      document.getElementById('aabout').innerHTML = about;
+      document.getElementById('navname').innerHTML = firstname;
+      document.getElementById('college').innerHTML = education_info_list[0][0];
+      document.getElementById('degree').innerHTML = education_info_list[0][1];
+      document.getElementById('branch').innerHTML = education_info_list[0][2];
+      document.getElementById('year').innerHTML = education_info_list[0][3];
+    
+      </script>
+     <script src="js/jquery.min.js"></script>
+     <script src="js/jquery-migrate-3.0.1.min.js"></script>
+     <script src="js/popper.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.easing.1.3.js"></script>
+     <script src="js/jquery.waypoints.min.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/jquery.magnific-popup.min.js"></script>
+     <script src="js/aos.js"></script>
+     <script src="js/jquery.animateNumber.min.js"></script>
+     <script src="js/scrollax.min.js"></script>
+     <script src="js/main.js"></script>
+     <script>
+    var list = [];
+    for(i=0;i<projects_info_list.length;i++){
+         list.push(projects_info_list[i]);
+       }
+    i = 1;   
+    list.forEach(function(data){
+      var card =
+      
+      '<div class="resume-wrap ftco-animate fadeInUp ftco-animated" style="height:250px; overflow-y:scroll;"> <span class="date">' + data[1] + '</span><h2>'+data[0]+'</h2><p class="mt-4">'+data[2]+'</p></div>';
+      if(i%2==0)
+      $('.column-2').append(card);
+      else{
+      $('.column-1').append(card);
+      }
+      i++;
+    });
+    for(let i = 0 ; i < skills_info_list.length; i++ ){
+        var skillCard = '<div class="col-md-6 animate-box"><div class="progress-wrap ftco-animate fadeInUp ftco-animated"><h3 style="color:#407BFF">'+skills_info_list[i]+'</h3></div></div>';
+        console.log(skillCard);
+          $('.skillset').append(skillCard); 
+      }
+    for(let i =0; i< experience_info_list.length; i++){
+      var experienceCard = ' <div class="col-md-4 text-center d-flex ftco-animate fadeInUp ftco-animated"><a href="#" class="services-1"><span class="icon"><i class="flaticon-ideas"></i></span><div class="desc"><h3 class="mb-5">'+experience_info_list[i][0]+'</h3>'+ experience_info_list[i][2]+'</div></a></div>';
+      $('.experienceList').append(experienceCard); 
+    }
+    </script>
+  </body>
+</html>

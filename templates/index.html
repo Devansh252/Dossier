@@ -1,0 +1,13 @@
+<html style="background-repeat: no-repeat;background-color: #e8e8e8; background-size: auto;background-position:top; background-image: url('{{ url_for('static',filename='images/Dossier.png')}}");">
+   <head>
+      <title>Dossier - a portfolio generator</title>
+      
+   </head>
+   <body style="text-align: center; "  >
+      <form action = "http://localhost:5000/result" method = "POST">
+         <p style="margin-top: 50vh; font-family: sans-serif;"><input style="width: 400px;border: none;box-shadow: 6px 3px 17px 0px #a1a1a1; height: 50px; border-radius: 30px; text-align: center;" type = "text" name = "URL" placeholder="Type your Linkedin URL"  /></p>
+         <p style="font-family: sans-serif;"><input style="height: 40px; width: 80px; border: none; border-radius: 20px;box-shadow: 6px 3px 17px 0px #a1a1a1; color: #757575; " type = "submit" value = "submit" /></p>
+         
+      </form>
+   </body>
+</html>

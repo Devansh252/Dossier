@@ -1,0 +1,14 @@
+<html style="background-repeat: no-repeat;background-color: #e8e8e8; background-size: auto;background-position:top; background-image: url('{{ url_for('static',filename='images/Dossier.png')}}");">
+   <head>
+      <title>Dossier - a portfolio generator</title>
+      
+   </head>
+   <body style="text-align: center; "  >
+      <form action = "http://localhost:5000/result" method = "POST">
+         <p style="margin-top: 50vh; font-family: sans-serif;">Your Website is Generated !!</p>
+         
+         <p style="font-family: sans-serif;"><input style="height: 50px; width: 90px; text-align: center; border: none; border-radius: 20px;box-shadow: 6px 3px 17px 0px #a1a1a1; color: #757575; " type = "" value = "Download Zip" onclick="window.location.href='{{url_for('download_file')}}'" /></p>
+         <p style="font-family: sans-serif;"><input style="height: 50px; width: 90px; text-align: center; border: none; border-radius: 20px;box-shadow: 6px 3px 17px 0px #a1a1a1; color: #757575; " type = "" value = "Vsit website" onclick="window.location.href='index2'" /></p>
+      </form>
+   </body>
+</html>
